@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>inline-block-layout</title>
+  <style>
+    nav {
+      display: inline-block;
+      vertical-align: top;/* vertical-align 属性会影响到 inline-block 元素，你可能会把它的值设置为 top */
+      width: 25%;/* 需要设置每一列的宽度 */
+    }
+    .column {
+      display: inline-block;
+      vertical-align: top;
+      width: 70%;
+    }
+    .container {/* 貌似没啥用 */
+      position: relative;
+      box-sizing: border-box; 
+    }
+  </style>
+</head>
+<body><!-- 如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙 -->
+  <div class="container" style="border: 2px solid black;">
+    <nav style="border: 2px solid green">
+      <ul>
+        <li>link1</li>
+        <li>link2</li>
+        <li>link3</li>
+      </ul>
+    </nav>
+    <div class="column">
+      <section style="border: 2px solid blue;">凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数。</section>
+      <section style="border: 2px solid blue;">凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字
+        数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数
+        凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数凑字数--凑字数
+      </section>
+    </div>
+  </div>
+</body>
+</html>

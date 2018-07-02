@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flexbox-layout</title>
+  <style>
+    .container {
+      display: -webkit-flex;
+      display: flex;
+    }
+    nav {
+      width: 200px;
+    }
+    .flex-column {
+      /* 使用flex代替指定宽度 */
+      /* 占据剩下的宽度的2/3 */
+      -webkit-flex: 2;
+              flex: 2;
+    }
+    .flex-column2 {
+      /* 使用flex代替指定宽度 */
+      /* 占据剩下的宽度的1/3 */
+      -webkit-flex: 1;
+              flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="border: 2px solid black;">
+    <!-- nav 参考: https://www.cnblogs.com/space007/p/6210632.html -->
+    <nav style="border: 2px solid green;">
+      <ul>
+        <li>link1</li>
+        <li>link2</li>
+        <li>link3</li>
+      </ul>
+      <p>这个例子和之前那个外观一模一样。请注意我在容器上没有做“清除浮动”, 啥也没做。</p>
+    </nav>
+
+    <div class="flex-column">
+      <section style="border: 2px solid red;">flex: 1</section>
+      <section style="border: 2px solid red;">凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数
+        凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数
+        ~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+        凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+        凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+        凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+      </section>
+      <section style="border: 2px solid red;">调整浏览器窗口时, 元素宽度会动态变. 很方便</section>
+    </div>
+    <div class="flex-column2" style="border: 2px solid red;">
+      <section>凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+          凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑</section>
+    </div>
+    
+  </div>
+</body>
+</html>

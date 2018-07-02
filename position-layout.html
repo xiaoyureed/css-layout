@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>position-layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    .container {
+      position: relative;
+      border: 2px solid black;
+    }
+    nav {
+      position: absolute;
+      left: 0;
+      width: 200px;
+      border: 2px solid green;
+    }
+    section {
+      /* position: relative;
+      left: 200px; */
+      margin-left: 200px; /* 默认 position:static */
+      border: 2px solid red;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 70px;
+      background-color: white;
+      width: 100%;
+      border: 2px solid green;
+    }
+    body {
+      margin-bottom: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- nav 参考: https://www.cnblogs.com/space007/p/6210632.html -->
+    <nav>
+      <ul>
+        <li>link1</li>
+        <li>link2</li>
+        <li>link3</li>
+      </ul>
+      <p>如果容器比nav元素低，那么nav会溢出到容器的外面。</p>
+    </nav>
+
+    <section>section 的 margin-left 样式确保了有足够的空间容纳 nav 元素。</section>
+    <section>凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数
+      凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数
+      ~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+      凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+      凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+      凑字数~凑字数凑字数~凑字数凑字数~凑字数凑凑字数~凑字数凑字数~凑字数凑字数~凑字数凑
+    </section>
+    <section>调整浏览器窗口时, 元素宽度会动态变化, 因为section元素没有手动设置width。</section>
+    <footer>使用了一个固定定位的页眉或页脚，确保有足够的空间来显示它们！我在 body 上面加了 margin-bottom </footer>
+    
+  </div>
+  <div style="visibility: hidden; margin: 0 100px 900px;">隐藏div, 把页面撑长一点</div>
+</body>
+</html>
